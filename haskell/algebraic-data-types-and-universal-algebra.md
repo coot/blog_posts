@@ -54,7 +54,7 @@ This algebra is free, there are no relations (or equalities of types) among all
 algebras of this type.  But relations are very useful, and it turns out that
 Haskell provides them using monads. For example for the `Maybe` type we have
 ```
-  Just (Just x) >>= id == Just x
+  (Just (Just x) >>= id) == Just x
 ```
 for every `x :: a`.  Note that this equation is on the level of elements rather
 than types, but it holds for all members of the type `a`.
@@ -72,13 +72,13 @@ successor of `Right x` is `Right (Right x)` and the successor of `Left x` is
 relation:
 
 ```
-  Right (Right x) >>= id === Right x
+  (Right (Right x) >>= id) == Right x
 ```
 
 and there is no relation for the `Left` constructor:
 
 ```
-  Left (x :: Either a) >>= id == Left x
+  (Left (x :: Either a) >>= id) == Left x
 ```
 
 for any `x :: a`.  The corresponding Peano algebra has the form:
