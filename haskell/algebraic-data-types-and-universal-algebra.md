@@ -48,7 +48,7 @@ arity 1, very like `0` and `s` in the Peano algebra case.  And indeed it
 forms a [Peano Algebra](https://en.wikipedia.org/wiki/Peano_axioms), for any
 type `a`. It's elements are:
 
-``` Nothing, Just a, Just (Just a), ...  ```
+``` Unit, Maybe Unit, Maybe (Maybe Unit), ... ```
 
 This algebra is free, there are no relations (or equalities of types) among all
 algebras of this type.  But relations are very useful, and it turns out that
